@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "DigitalNumbers-Regular";
+  src: local("DigitalNumbers-Regular"),
+    url(fonts/DigitalNumbers-Regular.woff) format("woff"),
+    url(fonts/DigitalNumbers-Regular.woff2) format("woff2");
+}

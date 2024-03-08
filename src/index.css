@@ -1,0 +1,71 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* APP'S COLOR THEME */
+:root {
+  --BEIGE: #eadfb4;
+  --BLUE-LIGHT: #9bb0c1;
+  --BLUE-DARK: #51829b;
+  --ORANGE: #f6995c;
+  --GRAY: #a1a1a1;
+  --GRAY-LIGHT: #cccccc;
+  --GRAY-DARK: #333333;
+  --GREEN: #39ff14;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  max-width: 100vw;
+  min-width: 100vw;
+  max-height: 100vh;
+  min-height: 100vh;
+  background: var(--BEIGE);
+}

@@ -1,0 +1,6 @@
+.frame {
+  flex-direction: column;
+  height: 35rem;
+  width: 25rem;
+  background: var(--GRAY-DARK);
+}

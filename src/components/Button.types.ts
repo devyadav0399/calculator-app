@@ -1,4 +1,5 @@
 interface ButtonProps {
   name: string,
-  alt?: boolean
+  alt?: boolean,
+  clickHandler: (name: string) => void,
 }

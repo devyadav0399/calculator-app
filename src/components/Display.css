@@ -7,6 +7,7 @@
   align-items: center;
   flex-direction: row-reverse;
   font-family: DigitalNumbers-Regular;
+  padding-right: 1rem;
 }
 
 .display span {

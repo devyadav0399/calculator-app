@@ -22,7 +22,7 @@ const store = (set: any) => ({
     }));
   },
   resetValue: () => {
-    set(() => ({ value: "0" }));
+    set(() => ({ value: "0", leftOperand: "", operation: "" }));
   },
   startOperation: (operation: string) => {
     set((state: CalculatorState) => ({
@@ -32,9 +32,19 @@ const store = (set: any) => ({
     }));
   },
   finishOperation: () => {
-    set((state: CalculatorState) => ({
-      value: calculate(state.leftOperand, state.operation, state.value),
-    }));
+    set((state: CalculatorState) => {
+      const calculatedValue: string = calculate(
+        state.leftOperand,
+        state.operation,
+        state.value,
+      );
+
+      return {
+        value: calculatedValue,
+        leftOperand: calculatedValue,
+        operation: "",
+      };
+    });
   },
 });
 

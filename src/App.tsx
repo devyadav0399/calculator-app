@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Frame from "./components/Frame";
 import classNames from "classnames";
+import Frame from "./components/Frame";
 
 const App: FC = () => {
   return (

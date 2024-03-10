@@ -5,7 +5,7 @@ const convertToNumber = (str: string) => {
 export const calculate = (
   leftOperand: string,
   operation: string,
-  rightOperand: string
+  rightOperand: string,
 ) => {
   console.log(leftOperand, operation, rightOperand);
   switch (operation) {
@@ -21,12 +21,12 @@ export const calculate = (
 
     case "x":
       return Math.floor(
-        convertToNumber(leftOperand) * convertToNumber(rightOperand)
+        convertToNumber(leftOperand) * convertToNumber(rightOperand),
       ).toString();
 
     case "/":
       return Math.floor(
-        convertToNumber(leftOperand) / convertToNumber(rightOperand)
+        convertToNumber(leftOperand) / convertToNumber(rightOperand),
       ).toString();
     default:
       return "0";

@@ -5,9 +5,18 @@ import "./Display.css";
 
 const Display: FC = () => {
   const { value } = useCalculatorStore();
+  
   return (
     <div className={classNames("display", "flex")}>
-      <span>{value}</span>
+      <div>
+        <span className="ghost">
+          {leftOperand && leftOperand}
+          {operation && operation}
+        </span>
+      </div>
+      <div>
+        <span className="current">{value}</span>
+      </div>
     </div>
   );
 };

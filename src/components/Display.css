@@ -1,15 +1,23 @@
 .display {
-  width: 100%;
-  height: 25%;
-  background-color: var(--GRAY-DARK);
-  color: var(--GREEN);
-  text-align: right;
-  align-items: center;
-  flex-direction: row-reverse;
-  font-family: DigitalNumbers-Regular;
-  padding-right: 1rem;
+    width: 100%;
+    height: 25%;
+    background-color: var(--GRAY-DARK);
+    color: var(--GREEN);
+    text-align: right;
+    align-items: center;
+    justify-content: space-between;
+    font-family: DigitalNumbers-Regular;
+    padding: 0 1.5rem;
+    outline: 2px solid var(--GRAY-LIGHT); /* Add border around content */
+    outline-offset: -1rem;
 }
 
-.display span {
-  font-size: 4rem;
+.current {
+    font-size: 4rem;
+}
+
+.ghost {
+    opacity: 0.2;
+    font-size: 2rem;
+    color: var(--GRAY-LIGHT);
 }

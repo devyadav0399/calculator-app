@@ -1,8 +1,8 @@
 import { FC } from "react";
-import "./Frame.css";
 import classNames from "classnames";
 import Display from "./Display";
 import Panel from "./Panel";
+import "./Frame.css";
 
 const Frame: FC = () => {
   return (

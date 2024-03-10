@@ -1,11 +1,11 @@
 import { FC } from "react";
 import classNames from "classnames";
-
-import { useStore } from "../../store";
+import { useCalculatorStore } from "../hooks/useCalculatorStore";
 import "./Display.css";
 
 const Display: FC = () => {
-  const { value, leftOperand, operation } = useStore((store) => store);
+  const { value } = useCalculatorStore();
+  
   return (
     <div className={classNames("display", "flex")}>
       <div>

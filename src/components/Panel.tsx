@@ -1,18 +1,16 @@
-import { FC } from "react";
-import "./Panel.css";
-import Button from "./Button";
+import { FC, useEffect } from "react";
 import classNames from "classnames";
-import { useStore } from "../../store";
+import Button from "./Button";
 import { isSingleDigit } from "../utils/checker";
+import { useCalculatorStore } from "../hooks/useCalculatorStore";
+import { useHandleKeyDown } from "../hooks/useHandleKeyDown";
+import "./Panel.css";
 
 const Panel: FC = () => {
-  const updateValue = useStore((store) => store.updateValue);
-  const resetValue = useStore((store) => store.resetValue);
-  const startOperation = useStore((store) => store.startOperation);
-  const finishOperation = useStore((store) => store.finishOperation);
-  const state = useStore((store) => store)
+  const { updateValue, resetValue, startOperation, finishOperation } =
+    useCalculatorStore();
 
-  console.log(state)
+  const { handleKeyDown } = useHandleKeyDown();
 
   const clickHandler = (name: string) => {
     if (isSingleDigit(name)) {
@@ -27,6 +25,14 @@ const Panel: FC = () => {
       null;
     }
   };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
   return (
     <div className={classNames("panel", "flex")}>
       <div className={classNames("row", "flex")}>

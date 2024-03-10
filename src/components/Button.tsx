@@ -1,7 +1,5 @@
-import classNames from "classnames";
 import { FC } from "react";
-
-import { useStore } from "../../store";
+import classNames from "classnames";
 import "./Button.css";
 
 const Button: FC<ButtonProps> = ({ name, alt, clickHandler }) => {

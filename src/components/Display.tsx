@@ -4,8 +4,8 @@ import { useCalculatorStore } from "../hooks/useCalculatorStore";
 import "./Display.css";
 
 const Display: FC = () => {
-  const { value } = useCalculatorStore();
-  
+  const { value, leftOperand, operation } = useCalculatorStore();
+
   return (
     <div className={classNames("display", "flex")}>
       <div>

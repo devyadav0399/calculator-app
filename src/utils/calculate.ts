@@ -7,7 +7,6 @@ export const calculate = (
   operation: string,
   rightOperand: string,
 ) => {
-  console.log(leftOperand, operation, rightOperand);
   switch (operation) {
     case "+":
       return (

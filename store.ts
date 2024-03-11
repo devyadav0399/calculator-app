@@ -19,6 +19,7 @@ const store = (set: any) => ({
   updateValue: (digit: string) => {
     set((state: CalculatorState) => ({
       value: state.value === "0" ? digit : state.value.concat(digit),
+      leftOperand: state.leftOperand,
     }));
   },
   resetValue: () => {
@@ -26,7 +27,7 @@ const store = (set: any) => ({
   },
   startOperation: (operation: string) => {
     set((state: CalculatorState) => ({
-      leftOperand: state.value,
+      leftOperand: state.leftOperand || state.value,
       operation: operation,
       value: "0",
     }));
@@ -38,7 +39,6 @@ const store = (set: any) => ({
         state.operation,
         state.value,
       );
-
       return {
         value: calculatedValue,
         leftOperand: calculatedValue,
